@@ -114,3 +114,130 @@
     background-color: #111;
   }
   
+  /* project.html */
+  
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>My Projects</title>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">CV</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+        <h1>My Projects</h1>
+      </header>
+      <main>
+        <section id="projects">
+          <h2>My Projects</h2>
+          <ul>
+            <li>
+              <h3>Project 1</h3>
+              <p>Description 1</p>
+              <a href="#">Live Demo</a>
+              <a href="#">Source Code</a>
+            </li>
+            <li>
+              <h3>Project 2</h3>
+              <p>Description 2</p>
+              <a href="#">Live Demo</a>
+              <a href="#">Source Code</a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </body>
+  </html>
+  
+  /* style.css */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: #111;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  section {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  li h3 {
+    margin: 0;
+  }
+  
+  li p {
+    margin: 0;
+  }
+  
+  li a {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  li a:hover {
+    background-color: #f2f2f2;
+  }
