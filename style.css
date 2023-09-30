@@ -4,17 +4,7 @@
     box-sizing: border-box;
   }
   
-  #about {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .profile {
+  #profile {
     width: 200px;
     height: 200px;
     background-image: url(profile.jpg);
@@ -25,9 +15,6 @@
     margin-right: 20px;
   }
   
-  .about-text {
-    text-align: left;
-  }
 
   body {
     margin: 0;
