@@ -4,6 +4,18 @@
     box-sizing: border-box;
   }
   
+  .profile {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+  
+  .profile::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -50,7 +62,9 @@
     display: block;
     float: left;
     margin-right: 20px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    clip-path: circle(50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
