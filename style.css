@@ -4,6 +4,17 @@
     box-sizing: border-box;
   }
   
+  .profile {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+  
+  .profile::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   
   body {
     margin: 0;
