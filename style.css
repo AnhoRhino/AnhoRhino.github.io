@@ -48,11 +48,13 @@
   
   img {
     display: block;
-    margin: 0 auto;
+    float: left;
+    margin-right: 20px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
+
   section {
     margin: 0;
     padding: 0;
