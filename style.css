@@ -15,7 +15,7 @@
     display: table;
     clear: both;
   }
-  
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -62,13 +62,10 @@
     display: block;
     float: left;
     margin-right: 20px;
-    width: 200px;
-    height: 200px;
-    clip-path: circle(50%);
+    border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
-
   section {
     margin: 0;
     padding: 0;
