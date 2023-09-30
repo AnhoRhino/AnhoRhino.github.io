@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
   }
-  
+
   .profile {
     width: 200px;
     height: 200px;
@@ -26,7 +26,7 @@
   }
   
   .about-text {
-    text-align: center;
+    text-align: left;
   }
 
   body {
