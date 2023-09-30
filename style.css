@@ -9,6 +9,11 @@
     align-items: center;
   }
   
+  .profile-container {
+    display: flex;
+    align-items: center;
+  }
+  
   .profile {
     width: 200px;
     height: 200px;
