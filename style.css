@@ -4,16 +4,18 @@
     box-sizing: border-box;
   }
   
-  .profile {
-    display: inline-block;
-    margin-right: 20px;
-    vertical-align: top;
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .profile::after {
-    content: "";
-    display: table;
-    clear: both;
+  .profile {
+    margin-right: 20px;
+  }
+  
+  .about-text {
+    text-align: center;
   }
 
   body {
