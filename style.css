@@ -1,0 +1,9 @@
+header {
+  background-color: #002333;
+  background-image: url('logo2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
