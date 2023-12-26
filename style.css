@@ -1,41 +1,154 @@
 /* style.css */
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+#profile {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+img {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-top: 10px;
+}
+
+li h3 {
+  margin: 0;
+}
+
+li p {
+  margin: 0;
+}
   
-  #profile {
-    width: 200px;
-    height: 200px;
-    background-image: url(profile.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-right: 20px;
-  }
+header {
+  color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+}
+
+form {
+  background-color: #f2f2f2;
+  top: 20px;
+  left: 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+}
   body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
-  
+
   header {
     background-color: #333;
     color: white;
     padding: 20px;
   }
-  
+
   nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
   }
-  
+
   nav li {
     float: left;
   }
-  
+
   nav li a {
     display: block;
     color: white;
@@ -43,11 +156,11 @@
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+
   nav li a:hover {
     background-color: #111;
   }
-  
+
   main {
     display: grid;
     grid-template-columns: 1fr;
@@ -55,7 +168,7 @@
     padding: 20px;
     border: 1px solid #ddd;
   }
-  
+
   img {
     display: block;
     float: left;
@@ -63,40 +176,40 @@
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-  
+
   section {
     margin: 0;
     padding: 0;
   }
-  
+
   h2 {
     margin-top: 20px;
   }
-  
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-  
+
   li {
     margin-top: 10px;
   }
-  
+
   li h3 {
     margin: 0;
   }
-  
+
   li p {
     margin: 0;
   }
-  
+
   form {
     background-color: #f2f2f2;
     padding: 20px;
     border: 1px solid #ddd;
   }
-  
+
   label {
     display: block;
     margin-top: 10px;
