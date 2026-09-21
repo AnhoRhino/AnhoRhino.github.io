@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Editor — Anders Holtan</title>
+
+<!-- This page is deliberately kept out of every index. It is not linked from
+     the site, it is not in the sitemap, and search engines are told to stay
+     away. That is obscurity, not security — the password is what matters. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+
+<!-- This is the one page that holds a GitHub token in memory, so it is worth
+     being strict about where script and data may come from. 'unsafe-inline'
+     is unavoidable for styles (the editor sets element.style directly) and for
+     the small theme bootstrap below; everything else is locked to this origin,
+     Google Fonts, and the GitHub API. -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline';
+  style-src  'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src   'self' https://fonts.gstatic.com;
+  img-src    'self' data: blob:;
+  connect-src 'self' https://api.github.com;
+  form-action 'none';
+  base-uri 'none';
+  object-src 'none';
+">
+<!-- frame-ancestors is ignored in a <meta> CSP — it only works as an HTTP
+     header, and GitHub Pages does not let us set those. This does the same job
+     for the one case that matters: the editor refusing to run inside someone
+     else's frame. -->
+<script>
+if (window.top !== window.self) {
+  try { window.top.location = window.self.location; }
+  catch (e) { document.documentElement.replaceChildren(); }
+}
+</script>
+<meta name="theme-color" content="#15181e">
+<meta name="color-scheme" content="dark light">
+
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/img/icon-32.png" sizes="32x32">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&amp;family=Inter:wght@400..700&amp;display=swap">
+
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
+
+<script>
+(function () {
+  var d = document.documentElement;
+  try {
+    var s = localStorage.getItem('ah.theme');
+    d.setAttribute('data-theme', (s === 'light' || s === 'dark') ? s : 'dark');
+    d.style.colorScheme = d.getAttribute('data-theme');
+  } catch (e) { d.setAttribute('data-theme', 'dark'); }
+  d.classList.remove('no-js');
+})();
+</script>
+</head>
+
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="../" aria-label="Back to the site">
+        <span class="brand__mark" aria-hidden="true"></span>
+      </a>
+      <span class="editor-badge">Editor</span>
+      <div class="topbar__tools">
+        <button class="iconbtn" type="button" data-theme-toggle aria-label="Toggle light / dark theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M4.2 12H2M22 12h-2.2M6.1 6.1 4.6 4.6M19.4 19.4l-1.5-1.5M17.9 6.1l1.5-1.5M4.6 19.4l1.5-1.5"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.6 8.6 0 0 1 9.6 3.5a8.6 8.6 0 1 0 10.9 10.9z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="awrap" id="admin">
+    <noscript>
+      <div class="acard acard--narrow">
+        <h1 class="acard__title">JavaScript required</h1>
+        <p class="acard__lead">The editor runs entirely in your browser and cannot work without it.</p>
+      </div>
+    </noscript>
+  </main>
+
+</div>
+
+<style>
+  /* One rule that only exists on this page. */
+  .editor-badge {
+    margin-inline-start: auto;
+    padding: 0.14rem 0.55rem;
+    border: 1px solid var(--accent-line);
+    border-radius: var(--radius-pill);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+</style>
+
+<script type="module" src="../assets/js/admin/main.js"></script>
+</body>
+</html>

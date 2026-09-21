@@ -1,0 +1,169 @@
+/* =============================================================================
+ * tokens.css — every colour, size and timing in one place
+ * =============================================================================
+ *
+ * Change a value here and it changes everywhere. Nothing else in the CSS
+ * should ever contain a raw colour.
+ *
+ * THE PALETTE
+ * Both themes are monochromatic: a single blue hue (~228°) held constant while
+ * only lightness moves. That is what stops the greys reading as dead concrete —
+ * there is a consistent cool cast through the whole ramp, so white looks like
+ * daylight and the dark greys look like dusk rather than switched-off black.
+ * One accent, an ice blue, is the only hue that departs from the ramp, and it
+ * departs only in saturation, not in hue. That keeps the page calm while still
+ * making links and the active tab obviously interactive.
+ *
+ * CONTRAST (measured, WCAG 2.1, worst case across all four backgrounds)
+ *   dark   body 11.08:1 (AAA)   secondary 6.87:1   muted 4.82:1   accent 6.31:1
+ *   light  body 14.02:1 (AAA)   secondary 6.59:1   muted 4.77:1   accent 5.40:1
+ * If you change a colour, re-check it — muted-on-bg-3 is the tightest pair.
+ * ---------------------------------------------------------------------------*/
+
+:root {
+  /* ---- type ------------------------------------------------------------- */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  /* The wordmark, as an alpha mask so it can be painted in any theme colour.
+     url() inside a custom property resolves against THIS stylesheet, so it
+     works identically from /, /projects/ and /backend/. */
+  --logo-mask: url('../img/logo-mask.png');
+
+  /* A 1.22 modular scale, fluid between a 360px and a 1400px viewport. */
+  --t-xs:   clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);
+  --t-sm:   clamp(0.82rem, 0.79rem + 0.14vw, 0.90rem);
+  --t-base: clamp(0.95rem, 0.91rem + 0.19vw, 1.06rem);
+  --t-md:   clamp(1.08rem, 1.01rem + 0.30vw, 1.28rem);
+  --t-lg:   clamp(1.30rem, 1.18rem + 0.52vw, 1.65rem);
+  --t-xl:   clamp(1.62rem, 1.38rem + 1.05vw, 2.35rem);
+  --t-2xl:  clamp(2.05rem, 1.55rem + 2.20vw, 3.40rem);
+  --t-3xl:  clamp(2.60rem, 1.70rem + 3.90vw, 5.00rem);
+
+  --lh-tight: 1.12;
+  --lh-snug:  1.32;
+  --lh-body:  1.66;
+
+  /* ---- spacing (a 4px base, doubling-ish) -------------------------------- */
+  --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
+  --s-5: 1.5rem;   --s-6: 2rem;     --s-7: 3rem;     --s-8: 4rem;
+  --s-9: 6rem;     --s-10: 8rem;
+
+  --measure: 64ch;               /* comfortable reading width */
+  --page-max: 1180px;            /* outer content width */
+  --page-pad: clamp(1.1rem, 4vw, 3rem);
+  --nav-h: 60px;
+
+  /* ---- shape ------------------------------------------------------------- */
+  --radius-s: 6px;
+  --radius-m: 12px;
+  --radius-l: 20px;
+  --radius-pill: 999px;
+
+  /* ---- motion ------------------------------------------------------------ */
+  --ease:     cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-base: 260ms;
+  --dur-slow: 620ms;
+
+  --z-canvas: 0;
+  --z-content: 1;
+  --z-nav: 50;
+  --z-dialog: 100;
+}
+
+/* =============================================================================
+ * DARK — the default. Dusk greys, never pure black.
+ * ===========================================================================*/
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-0: #15181e;   /* the page itself      */
+  --bg-1: #1b1f27;   /* nav, footer, raised  */
+  --bg-2: #222733;   /* cards                */
+  --bg-3: #2b313f;   /* hover, input wells   */
+
+  --line-0: rgba(233, 237, 244, 0.07);   /* hairline    */
+  --line-1: rgba(233, 237, 244, 0.13);   /* card border */
+  --line-2: rgba(233, 237, 244, 0.24);   /* emphasis    */
+
+  --fg-0: #e9edf4;   /* body text        11.08:1 min */
+  --fg-1: #b4bdcc;   /* secondary         6.87:1 min */
+  --fg-2: #949eb1;   /* dates, captions   4.82:1 min */
+
+  --accent:      #8fb8e8;
+  --accent-ink:  #15181e;                      /* text ON an accent fill */
+  --accent-soft: rgba(143, 184, 232, 0.14);
+  --accent-line: rgba(143, 184, 232, 0.32);
+  --brace:       rgba(143, 184, 232, 0.46);   /* the CV timeline brackets */
+
+  /* Status colours. Measured, like everything else:
+     danger 7.91:1 and warn 9.81:1 against --bg-0.                          */
+  --danger:      #f2938f;
+  --danger-line: rgba(242, 147, 143, 0.42);
+  --danger-soft: rgba(242, 147, 143, 0.12);
+  --warn:        #e9b877;
+  --warn-line:   rgba(233, 184, 119, 0.42);
+
+  --star:      rgba(203, 219, 240, 0.62);
+  --star-dim:  rgba(180, 199, 225, 0.30);
+  --star-line: rgba(150, 178, 215, 0.17);
+  --star-glow: rgba(143, 184, 232, 0.16);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.36), 0 2px 8px rgba(0, 0, 0, 0.22);
+  --shadow-2: 0 4px 12px rgba(0, 0, 0, 0.42), 0 18px 48px rgba(0, 0, 0, 0.38);
+
+  --glass:        rgba(27, 31, 39, 0.72);
+  --glass-border: rgba(233, 237, 244, 0.10);
+  --scrim:        rgba(9, 11, 15, 0.70);
+}
+
+/* =============================================================================
+ * LIGHT — white page, light grey for contrast, same blue cast.
+ * ===========================================================================*/
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-0: #ffffff;
+  --bg-1: #f5f7fb;
+  --bg-2: #edf1f7;
+  --bg-3: #e2e8f1;
+
+  --line-0: rgba(23, 27, 34, 0.07);
+  --line-1: rgba(23, 27, 34, 0.13);
+  --line-2: rgba(23, 27, 34, 0.26);
+
+  --fg-0: #171b22;   /* 14.02:1 min */
+  --fg-1: #48505f;   /*  6.59:1 min */
+  --fg-2: #5c6575;   /*  4.77:1 min */
+
+  --accent:      #235e9d;
+  --accent-ink:  #ffffff;
+  --accent-soft: rgba(35, 94, 157, 0.10);
+  --accent-line: rgba(35, 94, 157, 0.28);
+  --brace:       rgba(35, 94, 157, 0.42);
+
+  /* The dark theme's salmon and amber are only 2.75:1 and 1.83:1 on white,
+     so light mode needs genuinely different hues, not the same ones dimmed.
+     These measure 7.09:1 each against --bg-0.                              */
+  --danger:      #a8261f;
+  --danger-line: rgba(168, 38, 31, 0.38);
+  --danger-soft: rgba(168, 38, 31, 0.08);
+  --warn:        #7d4e00;
+  --warn-line:   rgba(125, 78, 0, 0.38);
+
+  --star:      rgba(58, 78, 110, 0.44);
+  --star-dim:  rgba(74, 94, 128, 0.22);
+  --star-line: rgba(70, 95, 135, 0.15);
+  --star-glow: rgba(35, 94, 157, 0.10);
+
+  --shadow-1: 0 1px 2px rgba(23, 27, 34, 0.05), 0 2px 8px rgba(23, 27, 34, 0.05);
+  --shadow-2: 0 4px 12px rgba(23, 27, 34, 0.07), 0 18px 48px rgba(23, 27, 34, 0.10);
+
+  --glass:        rgba(255, 255, 255, 0.76);
+  --glass-border: rgba(23, 27, 34, 0.09);
+  --scrim:        rgba(226, 232, 241, 0.72);
+}

@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Anders Holtan — Cybernetics &amp; Robotics</title>
-<meta name="description" content="Anders Holtan — cybernetics and robotics student at NTNU and electronics engineer. CV, projects and contact.">
+<title>Projects — Anders Holtan</title>
+<meta name="description" content="Personal and university projects by Anders Holtan — electronics, embedded systems and software.">
 <meta name="theme-color" content="#15181e">
 <meta name="color-scheme" content="dark light">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Anders Holtan — Cybernetics &amp; Robotics">
-<meta property="og:description" content="CV, projects and contact.">
-<meta property="og:image" content="assets/img/icon-512.png">
+<meta property="og:title" content="Projects — Anders Holtan">
+<meta property="og:description" content="Personal and university projects by Anders Holtan — electronics, embedded systems and software.">
+<meta property="og:image" content="../assets/img/icon-512.png">
 
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="assets/img/icon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&amp;family=Inter:wght@400..700&amp;display=swap">
 
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/pages.css">
-<link rel="stylesheet" href="assets/css/timeline.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/timeline.css">
 
 <!-- Sets the theme before the first paint, so there is never a flash of the
      wrong colours. Kept inline and tiny on purpose. -->
@@ -67,17 +67,17 @@
 
   <header class="topbar">
     <div class="wrap topbar__inner">
-      <a class="brand" href="./" aria-label="Anders Holtan — home">
+      <a class="brand" href="../" aria-label="Anders Holtan — home">
         <span class="brand__mark" aria-hidden="true"></span>
       </a>
 
       <!-- app.js rebuilds this from NAV in config.js. The links below are the
            no-JavaScript fallback and are replaced on load. -->
       <nav class="nav" data-nav aria-label="Main">
-        <a class="nav__link is-active" href="./">Home</a>
-        <a class="nav__link" href="./#cv">CV</a>
-        <a class="nav__link" href="projects/">Projects</a>
-        <a class="nav__link" href="contact/">Contact</a>
+        <a class="nav__link" href="../">Home</a>
+        <a class="nav__link" href="../#cv">CV</a>
+        <a class="nav__link is-active" href="../projects/">Projects</a>
+        <a class="nav__link" href="../contact/">Contact</a>
       </nav>
 
       <div class="topbar__tools">
@@ -92,28 +92,23 @@
     </div>
   </header>
 
-  <main id="main" data-page="home">
-
-    <!-- Short intro. Rendered by home.js from data/site.json. -->
-    <section class="section hero wrap" aria-label="Introduction">
-      <div data-hero></div>
-    </section>
-
-    <!-- The CV timeline. Rendered by timeline.js from data/cv.json. -->
-    <section class="section wrap wrap--wide" id="cv" aria-labelledby="cv-title">
+  <main id="main" data-page="projects">
+    <section class="section wrap" aria-labelledby="proj-title">
       <div class="section__head reveal">
-        <h2 class="section__title" id="cv-title" data-i18n="cv.title">Curriculum Vitae</h2>
-        <p class="section__lead" data-i18n="cv.lead">Where I have been, most recent first.</p>
+        <h1 class="section__title" id="proj-title" data-i18n="projects.title">Projects</h1>
+        <p class="section__lead" data-i18n="projects.lead">Things I have built. Click one to read more.</p>
       </div>
-      <div data-timeline></div>
+
+      <!-- One card per entry in data/projects.json, in file order.
+           Reorder them in /backend; there is no position field to keep in sync. -->
+      <div class="pgrid" data-projects></div>
     </section>
 
     <noscript>
       <section class="section wrap">
         <div class="errcard">
-          <p>This site needs JavaScript to render its content.
-             You can reach me at
-             <a href="https://www.linkedin.com/in/anders-holtan-715635182/">LinkedIn</a>.</p>
+          <p>This page needs JavaScript to list the projects. You can browse the
+             source on <a href="https://github.com/AnhoRhino">GitHub</a> instead.</p>
         </div>
       </section>
     </noscript>
@@ -122,12 +117,12 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <span>&copy; <span class="tnum">2026</span> Anders Holtan</span>
-      <span><a href="./#cv" onclick="window.print();return false;" data-i18n="cv.print" data-no-router>Print CV</a></span>
+      <span><a href="../#cv" data-i18n="cv.title">CV</a></span>
     </div>
   </footer>
 
 </div>
 
-<script type="module" src="assets/js/app.js"></script>
+<script type="module" src="../assets/js/app.js"></script>
 </body>
 </html>

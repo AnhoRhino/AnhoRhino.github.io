@@ -1,0 +1,126 @@
+{
+  "entries": [
+    {
+      "id": "ntnu-mtty",
+      "kind": "education",
+      "org": "NTNU",
+      "title": {
+        "en": "MSc Cybernetics and Robotics (5-year integrated)",
+        "no": "Kybernetikk og robotikk, 5-årig master"
+      },
+      "location": "Trondheim",
+      "start": "2023-08",
+      "end": null,
+      "bullets": [
+        {
+          "en": "Norwegian University of Science and Technology.",
+          "no": "Norges teknisk-naturvitenskapelige universitet."
+        }
+      ],
+      "tags": ["Control theory", "Electronics", "Mathematics"]
+    },
+    {
+      "id": "propulse-ntnu",
+      "kind": "work",
+      "org": "Propulse NTNU",
+      "title": {
+        "en": "Electronics Engineer",
+        "no": "Elektronikkingeniør"
+      },
+      "location": "Trondheim",
+      "start": "2023-09",
+      "end": null,
+      "bullets": [
+        {
+          "en": "PCB designer responsible for the black box and the storage system on the flight computer.",
+          "no": "Kretskortdesigner med ansvar for black box og lagringssystemet på flight computeren."
+        },
+        {
+          "en": "Lead recovery electrical engineer.",
+          "no": "Hovedansvarlig for elektronikken i gjenvinningssystemet."
+        }
+      ],
+      "tags": ["PCB design", "Altium", "Embedded"]
+    },
+    {
+      "id": "levre-skole",
+      "kind": "work",
+      "org": "Levre Barneskole",
+      "title": {
+        "en": "Teaching Assistant & Substitute Teacher",
+        "no": "Barneveileder og lærervikar"
+      },
+      "location": "Bærum",
+      "start": "2023-01",
+      "end": "2023-06",
+      "bullets": [
+        {
+          "en": "Full-time teaching assistant in school and after-school care, with regular substitute teaching assignments.",
+          "no": "Fulltid som barneveileder på skole og SFO, med lærervikaroppdrag med jevne mellomrom."
+        }
+      ],
+      "tags": ["Communication", "Responsibility"]
+    },
+    {
+      "id": "forsvaret",
+      "kind": "work",
+      "org": "Forsvaret",
+      "title": {
+        "en": "Second-in-Command & Signals Operator",
+        "no": "Nestlagfører og sambandsoperatør"
+      },
+      "location": "Norwegian Army",
+      "start": "2022-01",
+      "end": "2023-01",
+      "bullets": [
+        {
+          "en": "As second-in-command I was responsible for most of the squad's daily operations and maintenance.",
+          "no": "Som nestlagfører hadde jeg ansvar for det meste av lagets daglige drift og vedlikehold."
+        },
+        {
+          "en": "On exercise, responsible for half of every 24 hours for the squad's security and for delivering communications.",
+          "no": "På øvelser ansvarlig halve døgnet for lagets sikkerhet og for leveranse av samband."
+        }
+      ],
+      "tags": ["Leadership", "Radio communications"]
+    },
+    {
+      "id": "coop-extra-haslum",
+      "kind": "work",
+      "org": "Coop Extra, Haslum",
+      "title": {
+        "en": "Store Associate & Keyholder",
+        "no": "Butikkmedarbeider og låseansvarlig"
+      },
+      "location": "Bærum",
+      "start": "2021-08",
+      "end": "2021-12",
+      "bullets": [
+        {
+          "en": "Store associate, trusted with opening and closing the store.",
+          "no": "Butikkmedarbeider med låseansvar."
+        }
+      ],
+      "tags": ["Retail"]
+    },
+    {
+      "id": "realfagsgymnas",
+      "kind": "education",
+      "org": "Norges Realfagsgymnas",
+      "title": {
+        "en": "Upper Secondary — Science Specialisation",
+        "no": "Spesiell studiekompetanse"
+      },
+      "location": "Bærum",
+      "start": "2018-08",
+      "end": "2021-06",
+      "bullets": [
+        {
+          "en": "Mathematics R1/R2, Physics 1/2 and Chemistry 1.",
+          "no": "Matematikk R1/R2, Fysikk 1/2 og Kjemi 1."
+        }
+      ],
+      "tags": ["Mathematics", "Physics"]
+    }
+  ]
+}
