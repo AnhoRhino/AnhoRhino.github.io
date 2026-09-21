@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Anders Holtan — Cybernetics &amp; Robotics</title>
-<meta name="description" content="Anders Holtan — cybernetics and robotics student at NTNU and electronics engineer. CV, projects and contact.">
+<title>Contact — Anders Holtan</title>
+<meta name="description" content="Get in touch with Anders Holtan.">
 <meta name="theme-color" content="#15181e">
 <meta name="color-scheme" content="dark light">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Anders Holtan — Cybernetics &amp; Robotics">
-<meta property="og:description" content="CV, projects and contact.">
-<meta property="og:image" content="assets/img/icon-512.png">
+<meta property="og:title" content="Contact — Anders Holtan">
+<meta property="og:description" content="Get in touch with Anders Holtan.">
+<meta property="og:image" content="../assets/img/icon-512.png">
 
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="assets/img/icon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../assets/img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/img/icon-180.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&amp;family=Inter:wght@400..700&amp;display=swap">
 
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/base.css">
-<link rel="stylesheet" href="assets/css/pages.css">
-<link rel="stylesheet" href="assets/css/timeline.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/timeline.css">
 
 <!-- Sets the theme before the first paint, so there is never a flash of the
      wrong colours. Kept inline and tiny on purpose. -->
@@ -67,17 +67,17 @@
 
   <header class="topbar">
     <div class="wrap topbar__inner">
-      <a class="brand" href="./" aria-label="Anders Holtan — home">
+      <a class="brand" href="../" aria-label="Anders Holtan — home">
         <span class="brand__mark" aria-hidden="true"></span>
       </a>
 
       <!-- app.js rebuilds this from NAV in config.js. The links below are the
            no-JavaScript fallback and are replaced on load. -->
       <nav class="nav" data-nav aria-label="Main">
-        <a class="nav__link is-active" href="./">Home</a>
-        <a class="nav__link" href="./#cv">CV</a>
-        <a class="nav__link" href="projects/">Projects</a>
-        <a class="nav__link" href="contact/">Contact</a>
+        <a class="nav__link" href="../">Home</a>
+        <a class="nav__link" href="../#cv">CV</a>
+        <a class="nav__link" href="../projects/">Projects</a>
+        <a class="nav__link is-active" href="../contact/">Contact</a>
       </nav>
 
       <div class="topbar__tools">
@@ -92,27 +92,55 @@
     </div>
   </header>
 
-  <main id="main" data-page="home">
-
-    <!-- Short intro. Rendered by home.js from data/site.json. -->
-    <section class="section hero wrap" aria-label="Introduction">
-      <div data-hero></div>
-    </section>
-
-    <!-- The CV timeline. Rendered by timeline.js from data/cv.json. -->
-    <section class="section wrap wrap--wide" id="cv" aria-labelledby="cv-title">
+  <main id="main" data-page="contact">
+    <section class="section wrap contact" aria-labelledby="contact-title">
       <div class="section__head reveal">
-        <h2 class="section__title" id="cv-title" data-i18n="cv.title">Curriculum Vitae</h2>
-        <p class="section__lead" data-i18n="cv.lead">Where I have been, most recent first.</p>
+        <h1 class="section__title" id="contact-title" data-i18n="contact.title">Contact</h1>
+        <p class="section__lead" data-i18n="contact.lead">Send me a message and it lands straight in my inbox.</p>
       </div>
-      <div data-timeline></div>
+
+      <!-- The form posts to a relay service (see config.js). The destination
+           address is stored on their side and is not present anywhere in this
+           page's source. -->
+      <form class="contact__form reveal" data-contact-form novalidate>
+        <div class="contact__row">
+          <div class="field">
+            <label class="field__label" for="name" data-i18n="contact.name">Name</label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" required>
+            <p class="field__error" id="err-name" data-error-for="name" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="email" data-i18n="contact.email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+            <p class="field__error" id="err-email" data-error-for="email" role="alert" hidden></p>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="message" data-i18n="contact.message">Message</label>
+          <textarea class="textarea" id="message" name="message" rows="7" required></textarea>
+          <p class="field__error" id="err-message" data-error-for="message" role="alert" hidden></p>
+        </div>
+
+        <!-- Bot trap. Hidden from people, irresistible to scripts. -->
+        <div class="honeypot" aria-hidden="true">
+          <label>Leave this empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="contact__actions">
+          <button class="btn" type="submit" data-i18n="contact.send">Send message</button>
+        </div>
+
+        <p class="formstatus" data-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
+      </form>
+
+      <div class="contact__elsewhere reveal" data-contact-links></div>
     </section>
 
     <noscript>
       <section class="section wrap">
         <div class="errcard">
-          <p>This site needs JavaScript to render its content.
-             You can reach me at
+          <p>The message form needs JavaScript. You can reach me on
              <a href="https://www.linkedin.com/in/anders-holtan-715635182/">LinkedIn</a>.</p>
         </div>
       </section>
@@ -122,12 +150,12 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <span>&copy; <span class="tnum">2026</span> Anders Holtan</span>
-      <span><a href="./#cv" onclick="window.print();return false;" data-i18n="cv.print" data-no-router>Print CV</a></span>
+      <span><a href="../#cv" data-i18n="cv.title">CV</a></span>
     </div>
   </footer>
 
 </div>
 
-<script type="module" src="assets/js/app.js"></script>
+<script type="module" src="../assets/js/app.js"></script>
 </body>
 </html>

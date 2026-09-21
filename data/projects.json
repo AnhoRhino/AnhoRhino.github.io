@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "id": "flight-computer-blackbox",
+      "title": {
+        "en": "Rocket Flight Computer — Black Box",
+        "no": "Black box til rakettens flight computer"
+      },
+      "summary": {
+        "en": "Flight data recorder and storage subsystem for Propulse NTNU's sounding rocket.",
+        "no": "Flightdatarekorder og lagringssystem for Propulse NTNU sin sonderakett."
+      },
+      "description": {
+        "en": "A placeholder project entry so you can see how the Projects page looks.\n\nOpen /backend, go to the Projects tab, and replace this with the real thing: title, a one-line summary for the card, a longer description like this one, a cover image and a gallery.\n\nLine breaks become paragraphs, so you can write several paragraphs here.",
+        "no": "En plassholder slik at du ser hvordan prosjektsiden ser ut.\n\nÅpne /backend, gå til Prosjekter-fanen, og bytt dette ut med det ekte: tittel, en kort oppsummering til kortet, en lengre beskrivelse som denne, et forsidebilde og et galleri.\n\nLinjeskift blir til avsnitt, så du kan skrive flere avsnitt her."
+      },
+      "year": "2024",
+      "tags": ["PCB design", "Altium", "Embedded C"],
+      "cover": "",
+      "images": [],
+      "links": []
+    },
+    {
+      "id": "personal-website",
+      "title": {
+        "en": "This Website",
+        "no": "Denne nettsiden"
+      },
+      "summary": {
+        "en": "A static CV and portfolio site with a physics-driven constellation background.",
+        "no": "En statisk CV- og portefølgeside med en fysikkdrevet stjernebildebakgrunn."
+      },
+      "description": {
+        "en": "Hand-written HTML, CSS and vanilla JavaScript with no build step, hosted on GitHub Pages.\n\nThe background is a canvas of real constellations that scatter away from the cursor and spring back into place. All content lives in three JSON files, edited through a password-protected admin at /backend that commits straight to the repository via the GitHub API.",
+        "no": "Håndskrevet HTML, CSS og vanlig JavaScript uten byggesteg, hostet på GitHub Pages.\n\nBakgrunnen er et canvas med ekte stjernebilder som spres unna musepekeren og fjærer tilbake på plass. Alt innhold ligger i tre JSON-filer, redigert gjennom et passordbeskyttet admin-panel på /backend som committer rett til repoet via GitHub sitt API."
+      },
+      "year": "2026",
+      "tags": ["JavaScript", "Canvas", "CSS"],
+      "cover": "",
+      "images": [],
+      "links": [
+        { "label": "Source", "url": "https://github.com/AnhoRhino/AnhoRhino.github.io" }
+      ]
+    }
+  ]
+}

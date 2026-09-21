@@ -1,0 +1,80 @@
+{
+  "name": "Anders Holtan",
+  "tagline": {
+    "en": "Cybernetics & Robotics student · Electronics engineer",
+    "no": "Kybernetikk- og robotikkstudent · Elektronikkingeniør"
+  },
+  "intro": {
+    "en": "I study Cybernetics and Robotics at NTNU, on the five-year integrated master's programme. Day to day I design circuit boards for Propulse NTNU, where I am responsible for the black box and the storage system on our rocket's flight computer. I like problems that sit where electronics, control theory and software meet — and I have a long-standing fascination with everything above the atmosphere.",
+    "no": "Jeg studerer kybernetikk og robotikk ved NTNU, på det femårige masterprogrammet. Til daglig designer jeg kretskort for Propulse NTNU, der jeg har ansvar for black box og lagringssystemet på flight computeren til raketten vår. Jeg liker problemer som ligger i skjæringspunktet mellom elektronikk, reguleringsteknikk og programvare — og har en lang fascinasjon for alt som befinner seg over atmosfæren."
+  },
+  "photo": "assets/img/profile.jpg",
+  "location": "Trondheim, Norway",
+  "contact": {
+    "provider": "web3forms",
+    "accessKey": ""
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/anders-holtan-715635182/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/AnhoRhino",
+      "icon": "github"
+    }
+  ],
+  "skills": [
+    {
+      "group": {
+        "en": "Electronics",
+        "no": "Elektronikk"
+      },
+      "items": [
+        "PCB design",
+        "Altium Designer",
+        "Embedded systems",
+        "Data logging",
+        "Soldering & rework"
+      ]
+    },
+    {
+      "group": {
+        "en": "Software",
+        "no": "Programvare"
+      },
+      "items": [
+        "C",
+        "C++",
+        "Python",
+        "MATLAB",
+        "Git"
+      ]
+    },
+    {
+      "group": {
+        "en": "Engineering",
+        "no": "Ingeniørfag"
+      },
+      "items": [
+        "Control theory",
+        "Signal processing",
+        "Linear algebra"
+      ]
+    },
+    {
+      "group": {
+        "en": "Other",
+        "no": "Annet"
+      },
+      "items": [
+        "Radio communications",
+        "Team leadership",
+        "Norwegian (native)",
+        "English (fluent)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+# The editor is not for crawlers. It is not linked from the site either — this
+# is belt and braces, not the actual protection (see README, "Security").
+User-agent: *
+Disallow: /backend/
+Allow: /
